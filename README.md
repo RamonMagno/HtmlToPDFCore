@@ -35,6 +35,9 @@ static void Main(string[] args)
     }
 }
 ```
+### Docker support added to TesteMVC
+
+Now you can test inside Docker
 
 ### Environment Tested
 

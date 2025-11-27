@@ -13,6 +13,7 @@ using System.Reflection;
 
 namespace TesteMVC.Controllers
 {
+    [Route("[controller]")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -22,11 +23,14 @@ namespace TesteMVC.Controllers
             _logger = logger;
         }
 
+        [HttpGet("Index")]
         public IActionResult Index()
         {
             return View();
         }
 
+
+        [HttpGet("PDF")]
         public IActionResult PDF()
         {
             try
@@ -45,7 +49,7 @@ namespace TesteMVC.Controllers
             }
             catch (Exception ex)
             {
-                return Ok(ex.Message);
+                return Ok(ex.Message+"\n"+ex.StackTrace);
             }
         }
     }

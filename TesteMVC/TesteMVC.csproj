@@ -1,17 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HtmlToPDFCore\HtmlToPDFCore.csproj" />
+    <PackageReference Include="HtmlToPDFCore" Version="2.0.9" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Update="dependenciesInstall.sh">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
